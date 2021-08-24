@@ -62,5 +62,6 @@ class SimGrader(Grader):
 			res = [
 					["Simple", simplePass, simpleTotal, self.SIMPLE_MARKS],
 					["Hard", hardPass, hardTotal, self.HARD_MARKS],
-				]	
+				]
+		
 		return res
