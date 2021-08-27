@@ -292,6 +292,7 @@ def main():
 	while i<len(list_of_binary_instructions):
 		input_lis=list_of_binary_instructions[i]
 		if(input_lis[0]=="10011"):
+			FLAGS["V"]=FLAGS["G"]=FLAGS["E"]=FLAGS["L"]=0
 			print_every_register()
 			printing()
 			plot()
