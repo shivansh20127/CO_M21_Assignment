@@ -41,7 +41,7 @@ def perform_sub():
 	addr3=input_lis[1][13:16]
 	answer=R_val[R_addr[addr2]]-R_val[R_addr[addr3]]
 	FLAGS["V"]=FLAGS["G"]=FLAGS["E"]=FLAGS["L"]=0		
-	if(R_val[R_addr[addr1]]<0):		#if value is less than zero, result =0
+	if(answer<0):		#if value is less than zero, result=0
 		R_val[R_addr[addr1]]=0
 		FLAGS["V"]=1
 		flag=True
@@ -294,7 +294,7 @@ def main():
 		if(input_lis[0]=="10011"):
 			print_every_register()
 			printing()
-			plot()
+			#plot()
 			sys.exit();
 		elif (input_lis[0]=="01111"):
 			bonus_graph()
@@ -323,7 +323,7 @@ def main():
 				print_every_register()
 				bonus_graph()
 				i=i+1
-		elif(input_lis[0]=="10010" ):
+		elif(input_lis[0]=="10010"):
 			if(FLAGS["E"]==1):
 				FLAGS["V"]=FLAGS["G"]=FLAGS["E"]=FLAGS["L"]=0
 				print_every_register()
