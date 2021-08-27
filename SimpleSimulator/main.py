@@ -294,7 +294,7 @@ def main():
 		if(input_lis[0]=="10011"):
 			print_every_register()
 			printing()
-			#plot()
+			plot()
 			sys.exit();
 		elif (input_lis[0]=="01111"):
 			bonus_graph()
