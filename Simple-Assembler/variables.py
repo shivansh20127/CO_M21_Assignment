@@ -30,8 +30,11 @@ flag=False
 for i in range(len(list_of_instructions)):
 	instruc=list_of_instructions[i]
 	if(instruc[0]=="var" and flag==False):
-		var[instruc[1]]=counter
-		counter=counter+1
+		if(len(instruc)==2):
+			var[instruc[1]]=counter
+			counter=counter+1
+		else:
+			error_var.append(i)
 	elif(instruc[0]=="var" and flag==True):
 		error_var.append(i)
 	else:
